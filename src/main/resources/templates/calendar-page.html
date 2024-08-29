@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{common/fragments::head}">
+</head>
+<body>
+<nav th:replace="~{common/fragments::nav}"></nav>
+<section class="calendar-details" th:object="${calendarAddDto}">
+    <h1>Въведете данни</h1>
+    <form th:action="@{/calendar/add}" th:method="post">
+    <input th:field="*{description}" class="form-control calendar-info" type="text" placeholder="Kакво се е случило(кратко)" aria-label="default input example">
+    <button th:href="@{/calendar/add}">Предай</button>
+    </form>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{common/fragments::head}">
+</head>
+<body class="blog-add-page">
+<nav th:replace="~{common/fragments::nav}"></nav>
+<h1>Въведете данни</h1>
+<form th:action="@{/blog/add}" class="blog-form" th:object="${blogAddDto}" th:method="post">
+    <input th:field="*{title}" class="form-control blog-title" type="text" placeholder="Заглавие" aria-label="default input example">
+    <textarea
+            name="message"
+            id="message"
+            cols="30"
+            th:field="*{description}"
+            rows="4"
+            placeholder="Описание"
+            class="form-control blog-description"
+            style="background-color: white"
+    ></textarea>
+    <button th:href="@{/blog/add}">Предай</button>
+</form>
+</body>
+</html>

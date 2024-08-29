@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="~{common/fragments::head}">
+
+  </head>
+  <body>
+    <header>
+      <nav th:replace="~{common/fragments::nav}">
+
+      </nav>
+      <div class="header-context">
+        <h1>Добре дошли, семейство Денишеви!</h1>
+        <a
+          href="https://www.myheritage.com/site-family-tree-295602101/tree"
+          class="btn btn-lg btn-light family-tree"
+        >
+          Към Родословното дърво <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </header>
+    <main class="home-main">
+      <section class="our-family-section">
+        <h1>Открийте Нашето Семейно Приключение</h1>
+        <div class="our-family">
+          <div class="our-family-info">
+            <p>
+              Заплетеното дърво на нашето семейство разкрива история, която
+              продължава да се развива и плодовито процъфтява. Добре дошли в
+              онлайн пространството, където сърцето на Денишеви се събира и
+              споделя, където връзките се укрепват, а спомените се
+              съхраняват.Разгърнете Крилата на Семейството Си.
+            </p>
+            <p>
+              Давайте да споделяме, учим и растем заедно. Нека създадем нещо
+              прекрасно, което ще продължи да свързва поколенията. Добре дошли в
+              <b>Denishevi Family</b> - вашето виртуално семейно пространство!
+            </p>
+            <a href="/images/Родословно%20дърво%202024.pdf" class="btn btn-lg btn-light family-tree">
+              Към Родословното дърво-таблица
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="our-family-div-img">
+            <img src="/images/pngegg.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="how-works">
+        <article class="article">
+          <h1>Какво представлява сайтът ни?</h1>
+          <i class="fa-solid fa-people-roof"></i>
+        </article>
+        <article class="article">
+          <h2>Календар</h2>
+          <p>Открийте и отбележете важни дати за рода</p>
+          <i class="fa-solid fa-calendar-days"></i>
+        </article>
+        <article class="article">
+          <h2>Постижения</h2>
+          <p>Всички от рода могат да качат постижения в различни сфери</p>
+          <i class="fa-solid fa-trophy"></i>
+        </article>
+        <article class="article">
+          <h2>Блог</h2>
+          <p>
+            Споделете вашето мнение в блога и дайте идеи
+          </p>
+          <i class="fa-solid fa-kitchen-set"></i>
+        </article>
+        <article class="article">
+          <h2>Галерия</h2>
+          <p>Тук се качват снимки свързани с рода Денишеви</p>
+          <i class="fa-solid fa-images"></i>
+        </article>
+        <article class="article">
+          <h2>История</h2>
+          <p>
+            Разгледайте историите на хората от рода, които са оставили следа
+          </p>
+          <i class="fa-solid fa-timeline"></i>
+        </article>
+      </section>
+    </main>
+    <footer th:replace="~{common/fragments::footer}">
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{common/fragments::head}">
+</head>
+<body>
+<nav th:replace="~{common/fragments::nav}"></nav>
+<section class="blog-details-info" th:object="${blogDetails}">
+    <input type="hidden" id="blogId" name="blogId" th:value="*{id}"/>
+    <div  class="blog-details-div">
+        <h1 th:text="*{title}">Blog Title</h1>
+        <p th:text="*{description}">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+            nihil reprehenderit deleniti ut amet quia natus. Lorem ipsum dolor
+            sit, amet consectetur adipisicing elit. Rerum alias, expedita neque
+            perferendis ullam nostrum velit perspiciatis fugiat error, rem ab
+            illo, quo facere! Possimus voluptatibus veniam dolores cumque eos.
+            Illo corrupti eaque repellat vitae labore pariatur provident nulla
+            molestiae nobis, ab earum nisi cum quisquam expedita libero voluptas
+            sed qui mollitia ut nesciunt! Repellat aut vero eligendi odit optio.
+        </p>
+    </div>
+
+    <div>
+        <!-- Comments submission -->
+        <form id="commentForm" th:method="POST" th:action="@{/api/comments/{id}(id=*{id})}">
+            <div class="form-group">
+                <h4>Напиши коментар</h4>
+                <label for="message">Коментар</label>
+                <textarea
+                        name="message"
+                        id="message"
+                        cols="30"
+                        rows="5"
+                        class="form-control"
+                        style="background-color: white"
+                ></textarea>
+            </div>
+
+            <div class="form-group">
+                <input
+                        type="submit"
+                        class="btn btn-post-comment btn-secondary btn-lg"
+                        id="postComment"
+                        value="Коментирай"
+                />
+            </div>
+        </form>
+    </div>
+
+    <div class="comment-section">
+        <span id="commentCtnr"
+        ><!-- Comments section, filled in by script --></span
+        >
+    </div>
+
+    <!-- <div class="other-blogs">
+      <div class="other-forum-div">
+        <img src="/images/1520089795303.jpg" />
+        <a href="#">
+          <div class="other-forum-info">
+            <h4>Forum Title</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate nihil reprehenderit deleniti ut amet quia natus.
+            </p>
+          </div>
+        </a>
+      </div>
+    </div> -->
+</section>
+<script th:src="@{/js/comments.js}"></script>
+<footer th:replace="~{common/fragments::footer}"> </footer>
+</body>
+</html>

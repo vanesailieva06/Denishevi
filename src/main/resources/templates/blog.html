@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="~{common/fragments::head}">
+  </head>
+  <body class="blog">
+    <nav th:replace="~{common/fragments::nav}">
+
+    </nav>
+    <h1>Блогът на Денишеви</h1>
+    <section class="blog-container">
+      
+      <article class="blog-article" th:each="b: ${blogs}" th:object="${b}">
+        <img
+          src="/images/—Pngtree—diwali%20indian%20family%20shopping_6938325.png"
+          alt="background"
+        />
+        <h1 th:text="*{title}">Заглавие</h1>
+
+        <a th:href="@{/blog/{id}(id=*{id})}">Виж повече</a>
+      </article>
+<!--      todo: Да се разработи!-->
+    </section>
+    <a class="add-blog-link" th:href="@{/blog/add}">Добави тема за блог</a>
+
+    <footer th:replace="~{common/fragments::footer}"></footer>
+  </body>
+</html>

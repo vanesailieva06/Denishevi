@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="~{common/fragments::head}">
+  </head>
+  <body>
+    <nav th:replace="~{common/fragments::nav}">
+    </nav>
+    <section th:object="${achievementDetails}" class="achievement-page-section">
+      <h1>Заглавие</h1>
+        <div class="flex">
+      <p th:text="*{description}">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta ea amet
+        voluptatem delectus magnam, a fuga consequuntur. Eveniet natus ullam
+        nihil, ex facilis repellat mollitia laboriosam vel iusto sit voluptas?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore itaque
+        po
+rro explicabo voluptatibus voluptatem, magni quidem sed reprehenderit,
+        ratione dicta quibusdam nesciunt assumenda! Blanditiis, voluptatibus vel
+        at quo eaque veritatis. Lorem ipsum, dolor sit amet consectetur
+        adipisicing elit. Minus quidem voluptates magnam harum, error unde
+        dicta! Quasi doloremque molestiae exercitationem libero quibusdam.
+        Distinctio
+        ratione dolorum explicabo asperiores doloribus, dolores cum. Cum dolores
+        sint debitis est totam sit distinctio id itaque, fugit obcaecati harum
+        officia repudiandae ea voluptatem temporibus eum mollitia necessitatibus
+        alias placeat dolor eius maiores? Consequatur animi odit facere?Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Dolorem molestiae
+        eligendi officiis! Excepturi veritatis error qui, natus ut praesentium
+        ad. Neque autem eaque natus ea illo maxime ipsum explicabo tempora! Ut
+        sint, aliqui
+d provident possimus distinctio asperiores repudiandae, vero
+        magni molestias fugiat culpa. Dolorum distinctio, provident praesentium
+        quidem dolore ipsa aliquid placeat atque repudiandae vero eum
+        voluptatibus consequatur tempore hic.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod vero
+        distinctio nisi, magnam molestiae at! Non, in minima similique
+        praesentiu
+      </p>
+       <div> <img class="img-1" th:each="image : *{images}" th:src="@{/images/{imageUrl}(imageUrl = ${image})}" alt="template" /></div>
+        </div>
+    </section>
+    <footer th:replace="~{common/fragments::footer}">
+        
+      
+    </footer>
+  </body>
+</html>

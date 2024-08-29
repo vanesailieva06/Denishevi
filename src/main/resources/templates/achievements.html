@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="~{common/fragments::head}">
+  </head>
+  <body class="achievments">
+    <nav th:replace="~{common/fragments::nav}">
+    </nav>
+    <h1>Постижения</h1>
+    <section class="achievments-container" th:each="a : ${achievements}" th:object="${a}">
+      <div>
+        <article class="achievments-article">
+          <a  th:href="@{/achievement/{id}(id = *{id})}"><h1 th:text="*{title}">Заглавие</h1></a>
+          <p th:text="*{description}" class="achievments-info">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            nihil maiores ipsam, ratione molestiae eos repudiandae cupiditate?
+            Facilis nis
+          </p>
+
+        </article>
+      </div>
+      <div>
+        <img src="/images/klipartz.com.png" alt="" />
+      </div>
+
+    </section> <a class="achievments-page-link" href="#">Добави постижение</a>
+    <!--      todo: Да се разработи!-->
+  <footer th:replace="~{common/fragments::footer}"></footer>
+  </body>
+</html>
