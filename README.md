@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-# DenisheviFamily
-=======
+
 # Denishevi
->>>>>>> 39bc7c7116a7b12a99e32606f3c3b0e141ec1347
-DenisheviFamily is a app for our family member.
+DenisheviFamily is a app for our family member. Here you can see our family's achievements, old photos, calendar with improtant events and a blog with deferent themes.
+In my app I'm using: Spring framework, Spring Security, Thymeleaf, MySQL, ModelMapper, Spring Jpa
