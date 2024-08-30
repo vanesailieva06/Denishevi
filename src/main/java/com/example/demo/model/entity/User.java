@@ -25,14 +25,6 @@ public class User extends BaseEntity{
         this.username = username;
     }
 
-    @Column
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
     @Column(nullable = false)
     public String getFullName() {
         return fullName;

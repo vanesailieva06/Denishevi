@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
   <head th:replace="~{common/fragments::head}">
   </head>
   <body class="blog">
@@ -20,7 +20,7 @@
       </article>
 <!--      todo: Да се разработи!-->
     </section>
-    <a class="add-blog-link" th:href="@{/blog/add}">Добави тема за блог</a>
+    <a sec:authorize="hasRole('ADMIN')" class="add-blog-link" th:href="@{/blog/add}">Добави тема за блог</a>
 
     <footer th:replace="~{common/fragments::footer}"></footer>
   </body>

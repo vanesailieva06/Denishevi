@@ -29,11 +29,15 @@ public class UserController {
 
     @PostMapping("/register")
     public String confirmRegister(@Valid UserRegisterDto userRegisterDto, RedirectAttributes redirectAttributes,
-                                  BindingResult bindingResult){
+                                  BindingResult bindingResult, Model model){
+//        model.addAttribute("wrongPass", false);
         if (bindingResult.hasErrors() || !userRegisterDto.getPassword().equals(userRegisterDto.getConfirmPassword())){
             redirectAttributes.addFlashAttribute("userRegisterDto", userRegisterDto)
                     .addFlashAttribute("org.springframework.validation.BindingResult.userRegisterDto",
                             bindingResult);
+//            if (!userRegisterDto.getPassword().equals(userRegisterDto.getConfirmPassword())){
+//                model.addAttribute("wrongPass", true);
+//            } todo:Паролата не съвпада
             return "redirect:register";
         }
         boolean isExist = userService.findByUsername(userRegisterDto.getUsername()) != null;

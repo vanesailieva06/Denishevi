@@ -8,7 +8,7 @@
 
     <h1 class="mb-5 mt-3 text-center">Вход</h1>
     <p th:if="${bad_credentials}" class="errors invalid-user alert alert-danger">
-        Invalid username or password.
+       Невалидна парола или потребителско име
     </p>
     <form class="w-25 m-auto login-form" th:method="post" th:action="@{/users/login}">
         <div class="mb-3">

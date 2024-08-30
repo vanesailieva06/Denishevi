@@ -597,5 +597,9 @@ td a:hover {
 }
 .carousel{
   width: 70%;
+
   margin: auto;
+}
+.gallery-section img{
+  height: 770px;
 }

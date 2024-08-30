@@ -8,27 +8,30 @@
   <h1>
     Регистрация
   </h1>
+<!--  <p th:if="${wrongPass}" class="errors invalid-pass alert alert-danger">-->
+<!--    Паролата не съвпада-->
+<!--  </p>-->
   <form class="w-25 m-auto" th:method = "post"
         th:action = "@{/users/register}" th:object="${userRegisterDto}">
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Потребителско име</label>
-      <input type="text" class="form-control" id="exampleInputUsername1" th:field="*{username}" aria-describedby="emailHelp">
+      <label for="exampleInputUsername1" class="form-label">Потребителско име</label>
+      <input type="text" class="form-control alert alert-danger" id="exampleInputUsername1" th:field="*{username}" th:if="${#fields.hasErrors('username')}"
+             th:errors="*{username}" aria-describedby="emailHelp">
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Име и фамилия</label>
-      <input type="text" class="form-control" th:field="*{fullName}" id="exampleInputFullName1">
+      <input type="text" class="form-control alert alert-danger" th:field="*{fullName}" th:if="${#fields.hasErrors('fullName')}"
+             th:errors="*{fullName}" id="exampleInputFullName1">
     </div>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Имейл</label>
-        <input type="email" class="form-control" th:field="*{email}" id="exampleInputEmail1">
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Парола</label>
+        <input type="password" class="form-control alert alert-danger" th:field="*{password}" th:if="${#fields.hasErrors('password')}"
+               th:errors="*{password}" id="exampleInputPassword1">
       </div>
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Парола</label>
-        <input type="password" class="form-control" th:field="*{password}" id="exampleInputPassword1">
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Потвърди паролата</label>
-        <input type="password" class="form-control" th:field="*{confirmPassword}" id="exampleInputConfirmPassword1">
+        <label for="exampleInputConfirmPassword1" class="form-label">Потвърди паролата</label>
+        <input type="password" class="form-control alert alert-danger" th:if="${#fields.hasErrors('confirmPassword')}"
+               th:errors="*{confirmPassword}" th:field="*{confirmPassword}" id="exampleInputConfirmPassword1">
       </div>
     <button type="submit" class="btn btn-primary btn-lg">Регистрация</button>
   </form>
