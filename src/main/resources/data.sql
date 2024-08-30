@@ -1,3 +1,4 @@
+
 INSERT INTO users(id, email, full_name, password, username)
 VALUES
     (1, '11@123', 'User Userov', '6cf1643832d3199650e5b751fd97473490bc6dd4aa9343d9bfa23ba9ceb2e24d71360d42d571a2cabdbcec584bbda490', 'user'),

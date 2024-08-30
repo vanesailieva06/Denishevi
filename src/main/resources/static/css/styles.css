@@ -595,3 +595,7 @@ td a:hover {
 .flex img{
   max-height: 350px;
 }
+.carousel{
+  width: 70%;
+  margin: auto;
+}
