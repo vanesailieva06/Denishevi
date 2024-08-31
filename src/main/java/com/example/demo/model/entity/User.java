@@ -8,7 +8,6 @@ import java.util.List;
 @Table(name = "users")
 public class User extends BaseEntity{
     private String username;
-    private String email;
     private String fullName;
     private String password;
     private List<Role> roles;

@@ -39,7 +39,15 @@ p {
 .family-tree {
   padding: 16px 18px;
   border-radius: 30px;
+  margin-top: 50px;
+  background-color: white;
+  transition: all 1s;
+  color: black;
 }
+.family-tree:hover {
+   background-color: black;
+   color: white;
+ }
 main {
   width: 80%;
   margin: auto;
@@ -70,14 +78,8 @@ main {
   padding-top: 20px;
   line-height: 27px;
 }
-.our-family-info a {
-  margin-top: 50px;
-}
-.our-family-info a:hover {
-  background-color: black;
-  border: 1px solid black;
-  color: white;
-}
+
+
 .our-family-div-img img {
   max-height: 550px;
 }
@@ -112,6 +114,8 @@ main {
   background-color: #ffba958c;
   padding: 70px;
   border-radius: 30px;
+  color: black;
+  transition: all 1s;
 }
 .article:nth-child(1) {
   background-color: transparent;
@@ -602,4 +606,29 @@ td a:hover {
 }
 .gallery-section img{
   height: 770px;
+}
+.logout{
+  font-size: 22px;
+  padding-top: 7px;
+  background-color: transparent;
+  border: none;
+}
+.family-tree-section h1{
+  font-family: "Great Vibes";
+  font-size: 50px;
+  text-align: center;
+  margin: 20px;
+}
+.family-tree-images img{
+  height: 700px;
+
+}
+.family-tree-section .carousel{
+  width: 77%;
+}
+.carousel-control-next-icon{
+  color: black;
+}
+.carousel-control-prev-icon{
+  color: black;
 }

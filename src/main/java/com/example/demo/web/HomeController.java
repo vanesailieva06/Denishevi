@@ -10,4 +10,9 @@ public class HomeController {
     public String index(){
         return "index";
     }
+
+    @GetMapping("/family-tree")
+    public String familyTree(){
+        return "family-tree";
+    }
 }

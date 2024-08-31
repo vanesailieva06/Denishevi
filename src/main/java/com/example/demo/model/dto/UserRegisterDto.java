@@ -1,6 +1,8 @@
 package com.example.demo.model.dto;
 
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
@@ -13,7 +15,7 @@ public class UserRegisterDto {
     public UserRegisterDto() {
     }
 
-    @NotNull(message = "Потребителското име не може да е празно")
+    @NotEmpty(message = "Потребителското име не може да е празно")
     public String getUsername() {
         return username;
     }
@@ -23,7 +25,7 @@ public class UserRegisterDto {
     }
 
 
-    @NotNull(message = "Паролата не може да е празна")
+    @NotEmpty(message = "Паролата не може да е празна")
     @Size(min = 4, max = 20, message = "Паролата трябва да е между 4 и 20 знака")
     public String getPassword() {
         return password;
@@ -33,7 +35,7 @@ public class UserRegisterDto {
         this.password = password;
     }
 
-    @NotNull(message = "Паролата не може да е празна")
+    @NotEmpty(message = "Паролата не може да е празна")
     @Size(min = 4, max = 20, message = "Паролата трябва да е между 4 и 20 знака")
     public String getConfirmPassword() {
         return confirmPassword;
@@ -43,7 +45,7 @@ public class UserRegisterDto {
         this.confirmPassword = confirmPassword;
     }
 
-    @NotNull
+    @NotEmpty
     public String getFullName() {
         return fullName;
     }
